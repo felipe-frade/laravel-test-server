@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/contato/{id?}', ['uses' => 'ContatoController@index']);
+
+Route::post('/contato', ['uses' => 'ContatoController@criar']);
+
+Route::put('/contato', ['uses' => 'ContatoController@editar']);
+
+// Route::get('/contato/{id?}', function ($id = null) {
+//     return "contato $id";
+// });
+// Route::post('/contato', function () {
+//     dd($_POST);
+//     return "contato post";
+// });
+// Route::put('/contato', function () {
+//     return "contato put";
+// });
